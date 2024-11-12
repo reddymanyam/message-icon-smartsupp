@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Message-icon</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+
+    <div class="button" onclick="toggleChatbox()">
+        <div class="widget-button-text">Chat</div>
+        <div class="icon-container">
+            <div class="icon-wrapper">
+                <div class="icon-transform">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="currentColor"
+                        preserveAspectRatio="xMidYMid meet" width="24" height="24">
+                        <path
+                            d="M63.113,18.51v-.16C60.323,7.05,44.582,3,31.972,3S3.582,7,.792,18.5a66.22,66.22,0,0,0,0,20.46c1.18,4.74,5.05,8.63,11.36,11.41l-4,5A3.47,3.47,0,0,0,10.882,61a3.39,3.39,0,0,0,1.44-.31L26.862,54c1.79.18,3.49.27,5.07.27,11.04.04,28.41-4.04,31.18-15.43a60.33,60.33,0,0,0,0-20.33Z">
+                        </path>
+                    </svg>
+                </div>
+            </div>
+            <div id="widget-online-badge" class="widget-online-badge"></div>
+        </div>
+    </div>
+
+    <!-- Chatbox -->
+    <div id="chatbox" class="chatbox">
+        <div class="chatbox-header">
+            <div class="chatbox-header-1">
+                <button class="chatbox-header-btn" onclick="toggleChange()">
+                    <svg width="1.5em" height="2em" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" fill-rule="evenodd"
+                        clip-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"
+                        style="transform: scale(1.2) scaleX(1);">
+                        <g transform="matrix(1,0,0,-1,-2,22)">
+                            <path d="M15,3L21,3L21,9"
+                                style="fill: none; fill-rule: nonzero; stroke: currentcolor; stroke-width: 2px;"></path>
+                        </g>
+                        <g transform="matrix(1,0,0,-1,2,26)">
+                            <path d="M9,21L3,21L3,15"
+                                style="fill: none; fill-rule: nonzero; stroke: currentcolor; stroke-width: 2px;"></path>
+                        </g>
+                        <g transform="matrix(0.857864,-0.142136,0.142136,-0.857864,0.558456,24.5585)">
+                            <path d="M21,3L14,10"
+                                style="fill: none; fill-rule: nonzero; stroke: currentcolor; stroke-width: 2px;"></path>
+                        </g>
+                        <g transform="matrix(0.858562,-0.141438,0.141438,-0.858562,-0.545877,23.4541)">
+                            <path d="M3,21L10,14"
+                                style="fill: none; fill-rule: nonzero; stroke: currentcolor; stroke-width: 2px;"></path>
+                        </g>
+                    </svg>
+                </button>
+                <div class="chatbox-header-2">
+                    <button onclick="toggleOptions()"  class="chatbox-header-btn">
+                        <svg width="1.5em" height="2em" viewBox="0 0 24 24" version="1.1"
+                            xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                            xml:space="preserve" fill-rule="evenodd" clip-rule="evenodd" stroke-linecap="round"
+                            stroke-linejoin="round" style="transform: scale(1.2) scaleX(1);">
+                            <circle cx="12" cy="12" r="1" style="fill: none; stroke: currentcolor; stroke-width: 2px;">
+                            </circle>
+                            <g transform="matrix(1,0,0,1,0,1)">
+                                <circle cx="12" cy="5" r="1"
+                                    style="fill: none; stroke: currentcolor; stroke-width: 2px;">
+                                </circle>
+                            </g>
+                            <g transform="matrix(1,0,0,1,0,-1)">
+                                <circle cx="12" cy="19" r="1"
+                                    style="fill: none; stroke: currentcolor; stroke-width: 2px;">
+                                </circle>
+                            </g>
+                        </svg>
+                    </button>
+                    <button onclick="toggleChatbox()" class="chatbox-header-btn"><svg width="1.5em" height="2em"
+                            viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" fill-rule="evenodd"
+                            clip-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"
+                            style="transform: scale(1.2) scaleX(1);">
+                            <g transform="matrix(1.17105,0,0,1.17105,-2.05262,-2.05262)">
+                                <path d="M6,9L12,15L18,9"
+                                    style="fill: none; fill-rule: nonzero; stroke: currentcolor; stroke-width: 1.67px;">
+                                </path>
+                            </g>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <div class="chatbox-header-3">
+                <img src="https://files.smartsuppcdn.com/files/agents/avatars/989738-2HJJ0Irj6i.jpg?size=80"
+                    alt="Agent avatar" class="chatbox-header-3-img" data-testid="avatarAgent">
+                <span>Need help? Start a conversation</span>
+            </div>
+        </div>
+
+        <div class="chatbox-body" > 
+
+            <div class="chatbox-content" id="chatbox-body">
+                <div class="message">
+                    <div class="message-text">
+                        Greetings from Novel Office! Need an office space in Bangalore?
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="chatbox-input">
+                <input type="text" placeholder="Type your message here">
+                <button>Send</button>
+            </div>
+
+        </div>
+        <!-- Options -->
+         <div class="options" id="options">
+             <div class="options-header">
+                <button onclick="toggleOptions()" class="option-btn">X</button>
+                 <div class="options-name">
+                    <span>Options</span>
+                 </div>
+             </div>
+             <button class="options-body-btn">
+                <span class="icon">
+                    <svg viewBox="0 0 24 24" width="20px" height="20px">
+                        <path fill="none" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9m4.3 13a1.94 1.94 0 0 0 3.4 0M4 2C2.8 3.7 2 5.7 2 8m20 0c0-2.3-.8-4.3-2-6"></path>
+                    </svg>
+                </span>
+                Play the sounds
+            </button>
+            
+            <button class="options-body-btn">
+                <span class="icon">
+                    <svg viewBox="0 0 24 24" width="20px" height="20px">
+                        <path fill="none" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4m4-5l5 5l5-5m-5 5V3"></path>
+                    </svg>
+                </span>
+                Download transcript
+            </button>
+            
+            <button class="options-body-btn">
+                <span class="icon">
+                    <svg viewBox="0 0 24 24" width="20px" height="20px">
+                        <g fill="none" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                            <path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path>
+                            <path d="m9 12l2 2l4-4"></path>
+                        </g>
+                    </svg>
+                </span>
+                GDPR and privacy
+            </button>
+            
+         </div>
+
+    </div>
+
+    <script src="index.js"></script>
+</body>
+
+</html>
