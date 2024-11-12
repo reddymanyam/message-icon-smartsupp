@@ -55,7 +55,7 @@
                     </svg>
                 </button>
                 <div class="chatbox-header-2">
-                    <button onclick="toggleOptions()"  class="chatbox-header-btn">
+                    <button onclick="toggleOptions()" class="chatbox-header-btn">
                         <svg width="1.5em" height="2em" viewBox="0 0 24 24" version="1.1"
                             xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
                             xml:space="preserve" fill-rule="evenodd" clip-rule="evenodd" stroke-linecap="round"
@@ -95,8 +95,7 @@
             </div>
         </div>
 
-        <div class="chatbox-body" > 
-
+        <div class="chatbox-main" id="chatbox-main">
             <div class="chatbox-content" id="chatbox-body">
                 <div class="message">
                     <div class="message-text">
@@ -110,47 +109,56 @@
                 <input type="text" placeholder="Type your message here">
                 <button>Send</button>
             </div>
-
         </div>
         <!-- Options -->
-         <div class="options" id="options">
-             <div class="options-header">
-                <button onclick="toggleOptions()" class="option-btn">X</button>
-                 <div class="options-name">
-                    <span>Options</span>
-                 </div>
-             </div>
-             <button class="options-body-btn">
-                <span class="icon">
-                    <svg viewBox="0 0 24 24" width="20px" height="20px">
-                        <path fill="none" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9m4.3 13a1.94 1.94 0 0 0 3.4 0M4 2C2.8 3.7 2 5.7 2 8m20 0c0-2.3-.8-4.3-2-6"></path>
-                    </svg>
-                </span>
-                Play the sounds
-            </button>
-            
-            <button class="options-body-btn">
-                <span class="icon">
-                    <svg viewBox="0 0 24 24" width="20px" height="20px">
-                        <path fill="none" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4m4-5l5 5l5-5m-5 5V3"></path>
-                    </svg>
-                </span>
-                Download transcript
-            </button>
-            
-            <button class="options-body-btn">
-                <span class="icon">
-                    <svg viewBox="0 0 24 24" width="20px" height="20px">
-                        <g fill="none" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
-                            <path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path>
-                            <path d="m9 12l2 2l4-4"></path>
-                        </g>
-                    </svg>
-                </span>
-                GDPR and privacy
-            </button>
-            
-         </div>
+        <div id="overlay" class="overlay">
+            <div class="options" id="options">
+                <div class="options-header">
+                    <button onclick="toggleOptions()" class="option-btn">X</button>
+                    <div class="options-name">
+                        <span>Options</span>
+                    </div>
+                </div>
+                <button class="options-body-btn">
+                    <span class="icon">
+                        <svg viewBox="0 0 24 24" width="20px" height="20px">
+                            <path fill="none" stroke="white" stroke-linecap="round" stroke-linejoin="round"
+                                stroke-width="2"
+                                d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9m4.3 13a1.94 1.94 0 0 0 3.4 0M4 2C2.8 3.7 2 5.7 2 8m20 0c0-2.3-.8-4.3-2-6">
+                            </path>
+                        </svg>
+                    </span>
+                    Play the sounds
+                </button>
+
+                <button class="options-body-btn">
+                    <span class="icon">
+                        <svg viewBox="0 0 24 24" width="20px" height="20px">
+                            <path fill="none" stroke="white" stroke-linecap="round" stroke-linejoin="round"
+                                stroke-width="2" d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4m4-5l5 5l5-5m-5 5V3">
+                            </path>
+                        </svg>
+                    </span>
+                    Download transcript
+                </button>
+
+                <button class="options-body-btn">
+                    <span class="icon">
+                        <svg viewBox="0 0 24 24" width="20px" height="20px">
+                            <g fill="none" stroke="white" stroke-linecap="round" stroke-linejoin="round"
+                                stroke-width="2">
+                                <path
+                                    d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z">
+                                </path>
+                                <path d="m9 12l2 2l4-4"></path>
+                            </g>
+                        </svg>
+                    </span>
+                    GDPR and privacy
+                </button>
+
+            </div>
+        </div>
 
     </div>
 

@@ -1,24 +1,34 @@
 function toggleChatbox() {
     const chatbox = document.getElementById('chatbox');
-    if (chatbox.style.display === 'none' || chatbox.style.display === '') {
-        chatbox.style.display = 'block';
+    chatbox.style.display = (chatbox.style.display === 'block') ? 'none' : 'block';
+}
+
+function toggleOptions() {
+    const overlay = document.getElementById("overlay");
+    overlay.classList.toggle("show");
+    const slideup = document.querySelector(".options");
+    if (slideup.style.height === '0px' || slideup.style.height === '') {
+        slideup.style.height = '260px';
     } else {
-        chatbox.style.display = 'none';
+        slideup.style.height = '0px';
     }
 }
 
 
-function toggleOptions(){
-    const options = document.getElementById('options');
-    const chatboxbody = document.getElementById('chatbox-body');
-    if(options.style.display === 'none'){
-        options.style.display = 'block';
-        chatboxbody.style.backgroundColor = "lightgray";
-    } else{
-        options.style.display = 'none';
-        chatboxbody.style.backgroundColor = "";
+
+function toggleChange() {
+    const chatbox = document.querySelector('.chatbox');
+
+    // Toggle the width between '30vw' and '45vw'
+    if (chatbox.style.width === '350px' || chatbox.style.width === '') {
+        chatbox.style.width = '500px';
+    } else {
+        chatbox.style.width = '350px';
     }
 }
+
+
+
 
 
 

@@ -12,7 +12,7 @@ body {
     bottom: 3%;
     right: 1%;
     cursor: pointer;
-   
+
 }
 
 .widget-button-text {
@@ -65,12 +65,13 @@ body {
     position: absolute;
     bottom: 10px;
     right: 10px;
-    width: 350px;
+    width: 320px;
     height: 620px;
-    background-color: white;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    transition: width 0.5s ease;
 }
 
 .chatbox-header {
@@ -111,13 +112,14 @@ body {
 }
 
 .chatbox-header-btn:hover {
-    background-color: rgba(134, 133, 133, 0.2)
+    background-color: rgba(134, 133, 133, 0.2);
+    cursor: pointer;
 }
 
-/* .chatbox-body{
-    display: flex;
-    flex-direction: column;
-} */
+.chatbox-main {
+    background-color: white;
+}
+
 .chatbox-content {
     min-height: 430px;
     max-height: 435px;
@@ -164,17 +166,36 @@ body {
     background-color: #005fa3;
 }
 
-.options {
-    background-color: white;
-    display: none;
-    height: 260px;
+
+/* Wrapper to overlay the background */
+.overlay {
     position: absolute;
-    bottom: 0;
+    top: 0;
+    left: 0;
     width: 100%;
-    border-radius: 10px;
-    transition: height 4s;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(8px);
+    z-index: 999;
+    display: none;
 }
-.options-block{
+
+.overlay.show {
+    display: block;
+}
+
+.options {
+    position: absolute;
+    height: 0px; /*deafult 260px */
+    width: 100%;
+    background: white;
+    /* padding: 20px; */
+    z-index: 1000;
+    bottom: 0;
+    transition: height 0.5s ease;
+}
+
+.options-block {
     display: block;
 }
 
