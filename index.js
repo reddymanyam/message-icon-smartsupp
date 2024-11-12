@@ -19,7 +19,6 @@ function toggleOptions() {
 function toggleChange() {
     const chatbox = document.querySelector('.chatbox');
 
-    // Toggle the width between '30vw' and '45vw'
     if (chatbox.style.width === '350px' || chatbox.style.width === '') {
         chatbox.style.width = '500px';
     } else {
